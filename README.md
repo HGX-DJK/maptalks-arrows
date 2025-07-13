@@ -5,6 +5,7 @@ A maptalks plugin to support plot symbols, e.g.  DoubleArrow, ClosedCurve, Secto
 ![screenshot](https://user-images.githubusercontent.com/5208386/58606045-90747000-82cc-11e9-9f28-73f9be783342.png)
 
 All support geometries are listed below:
+
 * DoubleArrow
 * ClosedCurve
 * Sector
@@ -28,6 +29,7 @@ All support geometries are listed below:
 As a plugin, ```maptalks.plotsymbol``` must be loaded after ```maptalks.js``` in browsers.
 
 ### Vanilla Javascript
+
 ```html
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/maptalks.plotsymbol/dist/maptalks.plotsymbol.min.js"></script>
@@ -68,48 +70,15 @@ As a plugin, ```maptalks.plotsymbol``` must be loaded after ```maptalks.js``` in
 
 ```
 
-## Supported Browsers
+### StraightArrow 自定义设置箭头
 
-IE 9-11, Chrome, Firefox, other modern and mobile browsers.
+参数介绍
 
-## Contributing
-
-We welcome any kind of contributions including issue reportings, pull requests, documentation corrections, feature requests and any other helps.
-
-## Develop
-
-The ```index.js``` export all support geometries, like DoubleArrow, ClosedCurve, DiagonalArrow, etc.
-
-It is written in ES6, transpiled by [babel](https://babeljs.io/) and tested with [mocha](https://mochajs.org) and [expect.js](https://github.com/Automattic/expect.js).
-
-### Scripts
-
-* Install dependencies
-```shell
-$ npm install
-```
-
-* Watch source changes and generate runnable bundle repeatedly
-```shell
-$ gulp watch
-```
-
-* Tests
-```shell
-$ npm test
-```
-
-* Watch source changes and run tests repeatedly
-```shell
-$ gulp tdd
-```
-
-* Package and generate minified bundles to dist directory
-```shell
-$ gulp minify
-```
-
-* Lint
-```shell
-$ npm run lint
-```
+| 参数名         | 作用描述                                 | 默认值   | 备注                            |
+| ----------- | ------------------------------------ | ----- | ----------------------------- |
+| `lineRatio` | 箭头头部相对线宽的缩放比例，用于计算箭头头部大小。            | `1`   | 数值越大，箭头头部越大；越小，头部越小。          |
+| `f1`        | 箭头头部宽度的第一级比例因子，控制箭头“头部三角形”左右宽度的扩展幅度。 | `0.8` | 控制箭头尖端边缘的宽度影响。                |
+| `f2`        | 箭头头部宽度的第二级比例因子，用于箭头内部细节“颈部”部分的宽度控制。  | `1.4` | 使箭头头部有层次感和弧度，值越大颈部越宽。         |
+| `hScale1`   | 箭头头部向外突出（尖端前伸）的长度比例因子，影响箭头头部的前端尖锐度。  | `2.2` | 控制箭头尖端“拉长”的程度，数值越大尖端越长越尖锐。    |
+| `hScale2`   | 箭头头部内层细节的缩放比例，控制头部内部“颈部”部分的弧度大小。     | `0.7` | 影响箭头内部弯曲细节，使头部更平滑自然。          |
+| `h1h2Ratio` | 箭头头部控制点相对于箭尾两个端点距离的比例，控制箭头头部的弯曲延伸程度。 | `2.3` | 用于计算控制点到箭尾的延长距离，值越大箭头头部越长越突出。 |
