@@ -2,6 +2,9 @@ import * as maptalks from 'maptalks';
 import Point from 'point-geometry';
 import { getArrowBody, paintSmoothLine } from '../PlotUtils';
 
+/**
+ * @description 绘制直线箭头或者弯曲的箭头
+ */
 export default class StraightArrow extends maptalks.Curve {
 
     static fromJSON(json) {
@@ -55,6 +58,9 @@ export default class StraightArrow extends maptalks.Curve {
         const h2 = arrowPairs[1][arrowPairs[1].length - 1];
 
         const arrowConfig = this.options.arrowConfig || {};
+        /**
+         * @description 获取箭头相关设置参数
+         */
         const lineRatio = typeof arrowConfig.lineRatio !== 'undefined' ? arrowConfig.lineRatio : 1;
         const f1 = typeof arrowConfig.f1 !== 'undefined' ? arrowConfig.f1 : 0.8;
         const f2 = typeof arrowConfig.f2 !== 'undefined' ? arrowConfig.f2 : 1.4;

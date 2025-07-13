@@ -31,6 +31,9 @@ const options = {
  *     }
  * ).addTo(layer);
  */
+/**
+ * @description 绘制带尾巴的箭头
+ */
 export default class DoveTailDiagonalArrow extends DiagonalArrow {
 
     static fromJSON(json) {

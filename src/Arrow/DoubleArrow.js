@@ -21,6 +21,9 @@ const _options = {
     neckWidthFactor: 0.15
 };
 
+/**
+ * @description 绘制钳击双箭头
+ */
 class DoubleArrow extends InterprolationGeometry {
     constructor(coordinates, options = {}) {
         super(coordinates, options);

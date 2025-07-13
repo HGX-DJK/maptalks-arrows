@@ -4,7 +4,7 @@ A maptalks plugin to support plot symbols, e.g.  DoubleArrow, ClosedCurve, Secto
 
 ![screenshot](https://user-images.githubusercontent.com/5208386/58606045-90747000-82cc-11e9-9f28-73f9be783342.png)
 
-All support geometries are listed below:
+所有支持的几何形状列表如下：
 
 * DoubleArrow
 * ClosedCurve
