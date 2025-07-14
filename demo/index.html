@@ -56,18 +56,18 @@
             geometry.on('dblclick', e => {
                 e.target.startEdit();
             });
-            geometry.setArrowConfig({
-                lineRatio: 1.5,
-                f1: 1.0,
-                f2: 1.8,
-                hScale1: 2.5,
-                hScale2: 1.0,
-                h1h2Ratio: 3.0
-            });
+            // geometry.setArrowConfig({
+            //     lineRatio: 1.5,
+            //     f1: 1.0,
+            //     f2: 1.8,
+            //     hScale1: 2.5,
+            //     hScale2: 1.0,
+            //     h1h2Ratio: 3.0
+            // });
         });
 
         // var items = ['DoubleArrow', 'ClosedCurve', 'PlotSector', 'StraightArrow', 'DiagonalArrow', 'DoveTailDiagonalArrow', 'Point', 'ArcCurve', 'BoxZoom', 'FreeHandCircle', 'FreeHandEllipse', 'FreeHandLineString', 'FreeHandRectangle', 'FreeHandPolygon', 'Rectangle', 'Polygon', 'LineString', 'Circle', 'QuadBezierCurve', 'CubicBezierCurve'].map(function (value) {
-         var items = ['DiagonalArrow'].map(function (value) {
+         var items = ['PlotSector'].map(function (value) {
         return {
                 item: value,
                 click: function () {

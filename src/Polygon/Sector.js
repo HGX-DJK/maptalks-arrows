@@ -2,6 +2,9 @@ import { Coordinate, Util, DrawTool, LineString } from 'maptalks';
 import InterprolationGeometry from '../InterpolationGeometry';
 import { getSectorPoints, pointDistance, getAzimuth } from '../PlotUtils';
 
+/**
+ * @description 绘制扇形
+ */
 class Sector extends InterprolationGeometry {
     constructor(coordinates, options = {}) {
         super(coordinates, options);
@@ -123,6 +126,7 @@ DrawTool.registerMode('PlotSector', {
             if (sector) {
                 sector.setCoordinates(coordinates);
                 sector._setPrjCoordinates(prjCoords);
+                //设置绘制面的外轮廓为0
                 geometry.updateSymbol({
                     lineOpacity: 0
                 });

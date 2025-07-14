@@ -1071,6 +1071,10 @@ var paintSmoothLine = function paintSmoothLine(ctx, points, lineOpacity, smoothV
     return points;
 };
 
+/**
+ * @description 绘制直线箭头或者弯曲的箭头
+ */
+
 var StraightArrow = function (_maptalks$Curve) {
     inherits(StraightArrow, _maptalks$Curve);
 
@@ -1132,6 +1136,9 @@ var StraightArrow = function (_maptalks$Curve) {
         var h2 = arrowPairs[1][arrowPairs[1].length - 1];
 
         var arrowConfig = this.options.arrowConfig || {};
+        /**
+         * @description 获取箭头相关设置参数
+         */
         var lineRatio = typeof arrowConfig.lineRatio !== 'undefined' ? arrowConfig.lineRatio : 1;
         var f1 = typeof arrowConfig.f1 !== 'undefined' ? arrowConfig.f1 : 0.8;
         var f2 = typeof arrowConfig.f2 !== 'undefined' ? arrowConfig.f2 : 1.4;
@@ -1396,6 +1403,9 @@ var options$1 = {
  *     }
  * ).addTo(layer);
  */
+/**
+ * @description 绘制带尾巴的箭头
+ */
 
 var DoveTailDiagonalArrow = function (_DiagonalArrow) {
     inherits(DoveTailDiagonalArrow, _DiagonalArrow);
@@ -1539,6 +1549,10 @@ var _options = {
     neckHeightFactor: 0.85,
     neckWidthFactor: 0.15
 };
+
+/**
+ * @description 绘制钳击双箭头
+ */
 
 var DoubleArrow = function (_InterprolationGeomet) {
     inherits(DoubleArrow, _InterprolationGeomet);
@@ -1861,6 +1875,10 @@ maptalks.DrawTool.registerMode('DoubleArrow', {
     }
 });
 
+/**
+ * @description 绘制封闭的几何面
+ */
+
 var ClosedCurve = function (_InterprolationGeomet) {
     inherits(ClosedCurve, _InterprolationGeomet);
 
@@ -2025,6 +2043,10 @@ maptalks.DrawTool.registerMode('ClosedCurve', {
     }
 });
 
+/**
+ * @description 绘制扇形
+ */
+
 var Sector = function (_InterprolationGeomet) {
     inherits(Sector, _InterprolationGeomet);
 
@@ -2167,7 +2189,7 @@ maptalks.DrawTool.registerMode('PlotSector', {
                 sector.setCoordinates(coordinates);
                 sector._setPrjCoordinates(prjCoords);
                 geometry.updateSymbol({
-                    lineOpacity: 0
+                    lineOpacity: 1
                 });
             }
         }

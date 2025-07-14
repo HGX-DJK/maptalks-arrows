@@ -3,6 +3,9 @@ import * as Constants from '../Constants';
 import InterprolationGeometry from '../InterpolationGeometry';
 import { getBisectorNormals, getCubicValue } from '../PlotUtils';
 
+/**
+ * @description 绘制封闭的几何面
+ */
 class ClosedCurve extends InterprolationGeometry {
     constructor(coordinates, options = {}) {
         super(coordinates, options);
